@@ -75,5 +75,23 @@
                 input_CPF.value = cpf.substring(0, 11) + "-" + cpf.substring(11);
             }
         }
+
     }
+
+    let validaçãoS = ``
+    let mensagem = ``
+    function senhaa() {
+        let contadorSenha = 0
     
+        let senha = input_senha.value;
+    
+
+        let temNumero = false;
+
+
+        for (let i = 0; i < senha.length; i++) {
+        if (senha[i] >= '0' && senha[i] <= '9') {
+            temNumero = true;
+            }
+        }
+    }
