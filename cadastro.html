@@ -103,4 +103,20 @@
         else if (temNumero == true) { contadorSenha ++}
         if (senha.length < 8) {}
         else if (senha.length >=8) { contadorSenha++}
+    
+
+     if (contadorSenha == 4) {
+                validaçãoS = 'Forte'
+                mensagem = `<span style= "color: green">*Senha forte</span>`
+            } else if (contadorSenha >= 2) {
+                validaçãoS= 'Média'
+                mensagem = `<span style= "color: orange">*Senha média</span>`
+            } else if (contadorSenha == 1) {
+               
+                mensagem = `<span style= "color: red">*Senha fraca</span>`
+            } else if (contadorSenha == 0) {
+                mensagem = `<span style= "color: red">*Senha insegura</span>`
+            }
+            mensagemsenha.innerHTML = mensagem
+
     }
