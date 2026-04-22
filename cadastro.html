@@ -120,3 +120,38 @@
             mensagemsenha.innerHTML = mensagem
 
     }
+
+     function cadastrar() {
+        let nome = input_nome.value;
+        let cpf = input_CPF.value;
+        let email = input_email.value;
+        let senha = input_senha.value;
+        let confirmaçãoSenha = input_confi_senha.value;
+        let codigo = input_codigo.value;
+        let codigoDefinido = 'ABC'
+        let contador = 0
+       
+
+
+        if (nome.length < 3) {
+
+            mensagemnome.innerHTML = `<span style= "color: red">*Insira um nome válido</span>`
+        } else {
+            contador++;
+            mensagemnome.innerHTML = ``
+        }
+        if (!email.includes('@') || !email.includes('.') || email.endsWith('@')) {
+
+            mensagememail.innerHTML = `<span style= "color: red">*Insira um email válido</span>`
+        } else {
+            contador++;
+            mensagememail.innerHTML = ``
+        }
+        if (validaçãoS != 'Forte') {
+
+            mensagemsenha.innerHTML = `<span style= "color: red">*Necessita de uma senha forte</span>`
+
+        } else {
+            contador++;
+            mensagemsenha.innerHTML = mensagem
+        }
