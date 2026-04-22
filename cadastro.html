@@ -131,8 +131,6 @@
         let codigoDefinido = 'ABC'
         let contador = 0
        
-
-
         if (nome.length < 3) {
 
             mensagemnome.innerHTML = `<span style= "color: red">*Insira um nome válido</span>`
@@ -155,3 +153,32 @@
             contador++;
             mensagemsenha.innerHTML = mensagem
         }
+
+     if (senha != confirmaçãoSenha) {
+
+            mensagemconfirm.innerHTML = `<span style= "color: red">*Senha incorreta</span>`
+        } else {
+            contador++;
+            mensagemconfirm.innerHTML = ``
+        }
+        if (cpf.length != 14) {
+
+            mensagemcpf.innerHTML = `<span style= "color: red">*CPF inválido</span>`
+        } else {
+            contador++;
+            mensagemcpf.innerHTML = ``
+        }
+        if (codigo != codigoDefinido) {
+
+            mensagemcod.innerHTML = `<span style= "color: red">*Código incorreto</span>`
+        } else {
+            contador++;
+            mensagemcod.innerHTML = ``
+        }
+         
+        if (contador == 6) {
+            window.location = '../login-estilo/index.html'
+        }
+    }
+    
+</script>
